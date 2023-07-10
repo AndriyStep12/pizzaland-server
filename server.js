@@ -22,7 +22,7 @@ const bot = new TelegramBot(token, {polling: true});
 
 app.post('/send', (req,res)=>{
     const el = req.body;
-    let text = 'Is this your cart? \n\n'
+    let text = 'Cart: \n\n'
     for (let i = 0; i< el.length-1; i++){
         text += `<b>${el[i].type} "${el[i].name}"</b>` + '\n'
         text += 'Count..............' + el[i].quantity + '\n'
